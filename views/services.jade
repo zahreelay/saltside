@@ -1,0 +1,16 @@
+extends _shared
+
+block body
+	.services
+		h2 Services we provide
+
+		//- Implement filtering here
+		form(method="get")
+			input(type= "text" placeholder="type to filter" name="type")
+			input(type= "submit") 
+
+		for service in services
+			h4= service.job
+			p= service.cost
+			p= service.type
+

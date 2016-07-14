@@ -1,0 +1,16 @@
+extends _shared
+
+block body
+	.models
+		h2 Models we work on
+		//- Implement sorting here
+		button(onclick='sort(\"asc\")') Ascending
+		button(onclick='sort(\"desc\")') Descending
+		button(onclick='sort(\"none\")') None
+		
+		script.
+			function sort(order){
+				window.location = '\?order='+order;
+			}
+		for model in models
+			h4= model
